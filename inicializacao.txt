@@ -1,0 +1,98 @@
+1. Iniciar o servidor Node.js
+Abra o terminal ou prompt de comando.
+
+Navegue até o diretório do seu projeto. Por exemplo:
+
+cd caminho/para/seu/CRUD
+ 
+ Inicie o servidor usando o nodemon ou node:
+
+ nodemon
+
+Ou, se não estiver usando o nodemon:
+
+node index.js
+
+Certifique-se de que o terminal exibe uma mensagem indicando que o servidor está rodando na porta correta, como:
+
+Servidor rodando na porta 3000
+
+---------------------------------------------------
+
+Verificar o banco de dados MySQL
+Abra o MySQL no terminal ou em sua interface gráfica (por exemplo, MySQL Workbench ou phpMyAdmin).
+
+Verifique se a tabela users está configurada corretamente. No terminal, execute:
+
+Acesso ao mysql
+
+mysql -u root -p (Sem ;)
+
+USE crud_db;
+SELECT * FROM users;
+
+Se o banco não estiver rodando, inicie o serviço MySQL:
+
+Configurar o front-end
+Certifique-se de que o servidor Node.js está funcionando.
+Abra a página users.html ou form.html no navegador.
+
+A página será carregada na porta 5500.
+
+. Testar funcionalidades
+a) Testar no Insomnia/Postman:
+Verifique se a API está respondendo com:
+GET: Retorna a lista de usuários.
+POST: Adiciona um usuário.
+DELETE: Exclui um usuário.
+
+) Testar no navegador:
+Acesse:
+users.html: Deve mostrar os usuários na tabela.
+form.html: Deve permitir adicionar novos usuários.
+
+ Funcionalidades para testar:
+Excluir usuário:
+
+Clique no botão "Excluir".
+Verifique se a confirmação aparece e que o comportamento está correto:
+Cancelar: Não exclui o usuário.
+
+Adicionar usuário:
+
+Adicione um novo usuário no formulário.
+Verifique se a mensagem de sucesso aparece e se o usuário é redirecionado para a página users.html.
+
+ Recarregar estilos e lógica (se necessário)
+Se os estilos ou funcionalidades não estiverem funcionando corretamente:
+
+Confirme se os arquivos style.css e script.js estão referenciados corretamente no HTML:
+
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+Certifique-se de que os arquivos estão na mesma pasta que os HTMLs.
+
+Resumo dos comandos
+Iniciar o servidor Node.js:
+
+bash
+Copiar
+Editar
+nodemon
+Verificar o banco de dados:
+
+sql
+Copiar
+Editar
+USE crud_db;
+SELECT * FROM users;
+Abrir no navegador:
+
+users.html para a tabela.
+form.html para o formulário.
+Testar APIs no Insomnia/Postman:
+
+GET: http://localhost:3000/users
+POST: http://localhost:3000/users
+DELETE: http://localhost:3000/users/{id}
+
